@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Share+Tech&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Share Tech", monospace;
+}
+body {
+  background-color: rgb(160, 187, 211);
+}
+
+h2 {
+  font-family: "Poppins", monospace;
+}
+
+.popup {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  top: -25%;
+  visibility: hidden;
+  background-color: #fff;
+  width: 490px;
+  border-radius: 5px;
+  padding: 13px 17px 20px;
+  display: flex;
+  border-top: 3px solid #ea4d67;
+  transform: translateX(-50%);
+  box-shadow: 0 10px 25px rgba(52, 87, 220, 0.1);
+  transition: all 0.25s ease;
+}
+
+.popup.online {
+  border-top: 3px solid #2ecc71;
+}
+
+.popup.show {
+  top: 0;
+  visibility: visible;
+}
+
+.popup .icon i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  color: #fff;
+  font-size: 1.2;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ea4d67;
+  margin-right: 15px;
+  border-top: 3px solid #ea4d67;
+}
+
+.popup.online .icon i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  color: #fff;
+  font-size: 1.2;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #2ecc71;
+  margin-right: 15px;
+  border-top: 3px solid #2ecc71;
+}
+
+.popup .title {
+  font-size: 1.2rem;
+}
+
+.popup .desc {
+  color: #474747;
+  margin: 3px 0 10px;
+  font-size: 1.04rem;
+}
+
+.popup .reconnect {
+  font-family: "Poppins", monospace;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 0.95rem;
+  padding: 9px 15px;
+  background: #5372f0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup .reconnect:hover {
+  background: #2f56ef;
+}
+
+.popup.online .reconnect {
+  background-color: #bfbfbf;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 550px) {
+  .popup {
+    width: 100%;
+    padding: 10px 15px 17px;
+  }
+}
